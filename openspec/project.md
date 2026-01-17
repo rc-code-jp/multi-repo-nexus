@@ -1,31 +1,40 @@
 # Project Context
 
 ## Purpose
-[Describe your project's purpose and goals]
+このリポジトリは複数の子リポジトリ（API・WEB など）を束ねる親ワークスペースで、子リポジトリを一括管理することを目的としています。子リポジトリは `git/info/exclude` で Git 管理対象から外しつつ、AI が参照できる状態を維持します。ルートにはビルド/テストの実行基盤はありません。
 
 ## Tech Stack
-- [List your primary technologies]
-- [e.g., TypeScript, React, Node.js]
+- ルートはメタワークスペースのため、具体的な技術スタックは各子リポジトリの README/AGENTS.md に従います。
+- OpenSpec を仕様管理の基盤として利用します。
 
 ## Project Conventions
 
 ### Code Style
-[Describe your code style preferences, formatting rules, and naming conventions]
+- 変更対象の子リポジトリのスタイルガイドに従います。
+- 既存のファイル構成と書式を維持し、最小限の変更に留めます。
+- 大規模な整形は行わず、近傍のインデントと行長に合わせます。
 
 ### Architecture Patterns
-[Document your architectural decisions and patterns]
+- 子リポジトリは独立したリポジトリとして扱います。
+- どのリポジトリを対象にするか事前確認します。
 
 ### Testing Strategy
-[Explain your testing approach and requirements]
+- テスト方針は各子リポジトリの指示に従います。
+- ルートにはテスト実行基盤はありません。
 
 ### Git Workflow
-[Describe your branching strategy and commit conventions]
+- 新機能は `feature/<機能名>` ブランチを使用し、`main` にマージします。
+- 修正系は `fix/<内容>` ブランチを使用し、`staging` にマージします。
+- `production` へのマージは `hotfix` 扱いとします。
 
 ## Domain Context
-[Add domain-specific knowledge that AI assistants need to understand]
+- 複数のサービス/アプリをまとめて管理するための親ワークスペースです。
+- AI エージェント向けのガイド/指示ファイルをルートに配置します。
 
 ## Important Constraints
-[List any technical, business, or regulatory constraints]
+- 対話・ドキュメント・コメントは原則日本語で記述します。
+- 秘密情報や `.env` はコミットしません。
+- OpenSpec の規約に従って提案・変更管理を行います。
 
 ## External Dependencies
-[Document key external services, APIs, or systems]
+- 外部連携や依存サービスは各子リポジトリのドキュメントに従います（追記予定）。
