@@ -9,6 +9,13 @@
 git_info_excludeを使用して.gitignoreと同様の機能を提供する。
 これによりAIが下層のリポジトリを読み取ることができ、かつGit管理から除外することができる。
 
+```
+Selected configuration:
+  - Antigravity
+  - Claude Code
+  - OpenCode
+```
+
 ## 設定方法
 
 Git管理から中のプロジェクトを除外する。
