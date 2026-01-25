@@ -18,31 +18,8 @@ Selected configuration:
 
 ## 設定方法
 
-Git管理から中のプロジェクトを除外する。
-もし`.git/info/exclude`が存在しない場合は手動でファイルを作成する。
-以下のコマンドを実行してファイル内容をコピーする。
+リポジトリの初期化は、Agent Skills の **`init-repo`** スキルを使用してください。
 
-```
-# サンプルプロジェクト（本体はgit cloneの想定）
-mkdir -p project-a && cat > project-a/README.md <<'EOF'
-# Project A
- これはサンプルプロジェクトです。
-EOF
-
-mkdir -p project-b && cat > project-b/README.md <<'EOF'
-# Project B
- これはサンプルプロジェクトです。
-EOF
-```
-
-```zsh
-grep -Fxv -f .git/info/exclude .git_info_exclude >> .git/info/exclude
-```
-
-```zsh
-cp .env.example .env
-```
-
-⚠️ IDEやVSCodeを開いていた場合は、開き直さないとGit監視が更新されない可能性あり。
+詳細な手順とコマンドは [`.claude/skills/init-repo/SKILL.md`](./.claude/skills/init-repo/SKILL.md) を参照してください。
 
 ---
